@@ -8,15 +8,42 @@
   <meta name="CocoaVersion" content="2022.3">
   <style type="text/css">
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #eae96f; -webkit-text-stroke: #eae96f}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 17.0px Times; color: #eae96f; -webkit-text-stroke: #eae96f; min-height: 20.0px}
     span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
 <p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="en"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;Easepick Calendar&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Enlace al archivo CSS desde el CDN --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css" /&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Script de JavaScript desde el CDN --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.js"&gt;&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
 <p class="p1"><span class="s1">&lt;body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;h1&gt;Hello World&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1">&lt;p&gt;I'm hosted with GitHub Pages.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;!-- Campo donde aparecerá el calendario --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;input id="datepicker" placeholder="Selecciona una fecha" /&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>// Inicialización del calendario Easepick</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>const picker = new easepick.create({</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>element: document.getElementById('datepicker'),<span class="Apple-converted-space">  </span>// Enlazar el calendario al input</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>calendars: 1,<span class="Apple-converted-space">  </span>// Número de calendarios que se muestran</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>grid: 1,</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>range: true,<span class="Apple-converted-space">  </span>// Permite la selección de un rango de fechas</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>plugins: ['RangePlugin'],</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>RangePlugin: {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>tooltip: true<span class="Apple-converted-space">  </span>// Mostrar una herramienta de sugerencia</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">      </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/body&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
